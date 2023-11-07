@@ -1,0 +1,16 @@
+# Ignora pastas específicas
+__pycache__/
+venv/
+.idea/
+.vscode/
+
+# Ignora arquivos gerados pelo Visual Studio Code
+.vscode/
+*.code-workspace
+.history/
+
+# Ignora arquivos de texto
+*.txt
+
+# Exceções
+!requirements.txt
