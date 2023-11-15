@@ -1,5 +1,5 @@
 from typing import Dict, Tuple, List
-from matplotlib.pyplot import axis, show, title
+from matplotlib.pyplot import axis, show
 from networkx import \
     draw_networkx_nodes, \
     draw_networkx_labels, \
@@ -131,6 +131,5 @@ class GraphVisualizer:
             font_size=12,
         )
 
-        title('Árvore de Busca - DFS')
         axis('off')
         show()
