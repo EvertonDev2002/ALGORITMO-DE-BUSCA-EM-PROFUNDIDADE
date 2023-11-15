@@ -106,7 +106,7 @@ class GraphVisualizer:
             self.__di_graph,
             shell_layout(self.__di_graph),
             node_size=3000,
-            node_color="lightblue"
+            node_color="lightblue",
         )
         draw_networkx_labels(
             self.__di_graph,
@@ -119,12 +119,16 @@ class GraphVisualizer:
         draw_networkx_edges(
             self.__di_graph,
             shell_layout(self.__di_graph),
+            arrowsize=20,
+            arrows=True,
+            min_target_margin=29,
             edge_color=self.__edge_colors_list  # noqa: E261 # type: ignore
             )
         draw_networkx_edge_labels(
             self.__di_graph,
             shell_layout(self.__di_graph),
-            edge_labels=self.__edges_label
+            edge_labels=self.__edges_label,
+            font_size=12,
         )
 
         title('Árvore de Busca - DFS')

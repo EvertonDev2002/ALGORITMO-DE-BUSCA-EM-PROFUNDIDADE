@@ -2,14 +2,14 @@ from depth_first_search import DepthFirstSearch
 from graph import DirectedGraph
 from GraphVisualizer import GraphVisualizer
 
-graph = DirectedGraph("G3.txt")
+graph = DirectedGraph("G.txt")  # <- Arquivo do grafo
 graph.load_graph()
+
 algorithm = DepthFirstSearch(
     graph.list_vertices,
     graph.edges,
     graph.adjacent_list
 )
-
 algorithm.dfs()
 
 plot = GraphVisualizer(
