@@ -19,9 +19,9 @@ class DirectedGraph:
                 for vertex in range(
                     int(
                         lines[:1][0][:2]
-                        )
                     )
-                ]
+                )
+            ]
 
             for line in lines[1:]:
 
@@ -32,11 +32,11 @@ class DirectedGraph:
 
                 self.__adjacent_list.setdefault(
                     vertex, []
-                    ).append(adjacent)
+                ).append(adjacent)
 
                 self.__edges.setdefault(
                     (vertex, adjacent), ''
-                    )
+                )
 
             for vertex in set(self.__verteces):
                 if vertex not in list(self.adjacent_list.keys()):
@@ -54,8 +54,8 @@ class DirectedGraph:
                 self.__adjacent_list.items(),
                 key=lambda item: len(item[1]),
                 reverse=True
-                )
             )
+        )
 
         return self.__adjacent_list
 
@@ -72,7 +72,7 @@ class DirectedGraph:
     def __length_vertices(self) -> None:
         self.__number_vertices = len(
             self.__verteces
-            )
+        )
 
     @property
     def edges(self) -> Dict[Tuple[int, int], str]:

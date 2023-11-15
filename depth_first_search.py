@@ -13,15 +13,15 @@ class DepthFirstSearch:
         self.color: Dict[int, str] = {
             key: 'Branco'
             for key in vertices
-            }
+        }
         self.discovery: Dict[int, int] = {
             key: 0
             for key in vertices
-            }
+        }
         self.finish: Dict[int, int] = {
             key: 0
             for key in vertices
-            }
+        }
         self.mark = 0
         self.edges_label = edges_label
 
@@ -34,10 +34,8 @@ class DepthFirstSearch:
         self.color[vertex] = 'Cinza'
         self.mark += 1
         self.discovery[vertex] = self.mark
-        # print("Antes do for:", vertex)
 
         for adjacent in self.adjacent_list[vertex]:
-            # print("Depois do for:", adjacent)
             if self.color[adjacent] == 'Branco':
 
                 print(f'{vertex, adjacent}: árvore')
