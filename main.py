@@ -1,8 +1,8 @@
 from depth_first_search import DepthFirstSearch
 from graph import DirectedGraph
-from GraphVisualizer import GraphVisualizer
+from graph_visualizer import GraphVisualizer
 
-graph = DirectedGraph("G.txt")  # <- Arquivo do grafo
+graph = DirectedGraph("G5.txt")  # <- Arquivo do grafo
 graph.load_graph()
 
 algorithm = DepthFirstSearch(

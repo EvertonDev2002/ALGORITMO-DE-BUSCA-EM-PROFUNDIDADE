@@ -14,7 +14,7 @@ class DirectedGraph:
         with open(self.text_file, "r") as file:
             lines = file.readlines()
 
-            self.__verteces: List[int] = [
+            self.__verteces = [
                 (vertex + 1)
                 for vertex in range(
                     int(
@@ -52,8 +52,7 @@ class DirectedGraph:
         self.__adjacent_list = dict(
             sorted(
                 self.__adjacent_list.items(),
-                key=lambda item: len(item[1]),
-                reverse=True
+                key=lambda item: (-len(item[1]), item[0]),
             )
         )
 
